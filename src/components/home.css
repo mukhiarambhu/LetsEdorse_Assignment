@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.form {
+  width: 500px;
+  border: 1px solid black;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 600px;
+}
+.form_inputdiv {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.form_labeldiv {
+  /* padding-top: 10px; */
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  padding-left: 10px;
+}
+
+select {
+  width: 150px;
+}
+input[type="text"] {
+  width: 150px;
+}
+
+input[type="number"] {
+  width: 150px;
+}
+
+option {
+  width: 150px;
+  overflow: hidden;
+}
