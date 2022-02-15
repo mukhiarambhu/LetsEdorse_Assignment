@@ -13,6 +13,7 @@ function Home() {
             </div>
 
             <select name="business_stage">
+              <option>select</option>
               <option value="Start-up">Start-up</option>
               <option value="Scale-up">Scale-up</option>
             </select>
@@ -31,6 +32,7 @@ function Home() {
               name="age_of_establishment"
               min="0"
               max="100"
+              placeholder="Enter age of Establishment"
             />
           </div>
           {/* {primary_product_service_offered} */}
@@ -42,7 +44,11 @@ function Home() {
               </label>
             </div>
 
-            <input type="text" name="primary_product_service_offered" />
+            <input
+              type="text"
+              name="primary_product_service_offered"
+              placeholder="Enter Primary Products/Services"
+            />
           </div>
 
           {/* {offered_to} */}
@@ -52,6 +58,7 @@ function Home() {
             </div>
 
             <select name="offered_to">
+              <option>select</option>
               <option value="End customers">End customers</option>
               <option value="Wholesalers">Wholesalers</option>
               <option value="Distributors">Distributors</option>
@@ -59,7 +66,7 @@ function Home() {
             </select>
           </div>
 
-          {/* {offered_to} */}
+          {/* {Secondary Products/Services offfered} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Secondary Products/Services offfered">
@@ -67,7 +74,11 @@ function Home() {
               </label>
             </div>
 
-            <input type="text" name="secondary_product_service_offered" />
+            <input
+              type="text"
+              name="secondary_product_service_offered"
+              placeholder="Enter Secondary Products/Service"
+            />
           </div>
 
           {/* {processed_products} */}
@@ -79,7 +90,11 @@ function Home() {
               </label>
             </div>
 
-            <input type="text" name="processed_products" />
+            <input
+              type="text"
+              name="processed_products"
+              placeholder="Enter Processed Products"
+            />
           </div>
 
           {/* {relevant_experience} */}
@@ -90,7 +105,11 @@ function Home() {
               </label>
             </div>
 
-            <input type="Number" name="relevant_experience" />
+            <input
+              type="Number"
+              name="relevant_experience"
+              placeholder="Enter year of Experience "
+            />
           </div>
 
           {/* {skill_training} */}
@@ -101,6 +120,7 @@ function Home() {
             </div>
 
             <select name="skill_training">
+              <option>select</option>
               <option value="No formal skill training">
                 No formal skill training
               </option>
@@ -166,6 +186,7 @@ function Home() {
             </div>
 
             <select name="establishment_type">
+              <option>select</option>
               <option value="Factory">Factory</option>
               <option value="Mill">Mill</option>
               <option value="Stall">Stall</option>
@@ -190,7 +211,11 @@ function Home() {
               <label htmlFor="Name of the area">Name of the area:</label>
             </div>
 
-            <input type="text" name="business_area" />
+            <input
+              type="text"
+              name="business_area"
+              placeholder="Enter Name of Area"
+            />
           </div>
 
           {/* {business_locality} */}
@@ -203,6 +228,7 @@ function Home() {
             </div>
 
             <select name="business_locality">
+              <option>select</option>
               <option value="Urban">Urban</option>
               <option value="Rural">Rural</option>
               <option value="Semi-urban">Semi-urban</option>
@@ -220,6 +246,7 @@ function Home() {
             </div>
 
             <select name="infra_ownership">
+              <option>select</option>
               <option value="Rented">Rented</option>
               <option value="Leased">Leased</option>
               <option value="Self-owned">Self-owned</option>
@@ -236,7 +263,11 @@ function Home() {
               </label>
             </div>
 
-            <input type="number" name="establishment_area" />
+            <input
+              type="number"
+              name="establishment_area"
+              placeholder="Enter Establishment area "
+            />
           </div>
           {/* {reason for location} */}
           <div className="form_inputdiv">
@@ -328,6 +359,7 @@ function Home() {
             </div>
 
             <select name="market_research">
+              <option>select</option>
               <option value="Not conducted">Not conducted</option>
               <option value="Market research has been conducted">
                 Market research has been conducted
@@ -341,6 +373,7 @@ function Home() {
             </div>
 
             <select name="primary_market">
+              <option>select</option>
               <option value="Local">Local</option>
               <option value="Regional">Regional</option>
               <option value="National">National</option>
@@ -353,7 +386,11 @@ function Home() {
               <label htmlFor="Customers">Customers:</label>
             </div>
 
-            <input type="text" name="customers" />
+            <input
+              type="text"
+              name="customers"
+              placeholder="Enter Customer name"
+            />
           </div>
           {/* {season of high sale} */}
           <div className="form_inputdiv">
@@ -364,6 +401,7 @@ function Home() {
             </div>
 
             <select name="seasonality">
+              <option>select</option>
               <option value="Consisitent sales across all seasons">
                 Consisitent sales across all seasons
               </option>
@@ -385,6 +423,7 @@ function Home() {
             </div>
 
             <select name="competition">
+              <option>select</option>
               <option value="No similar goods/service provider in this locality">
                 No similar goods/service provider in this locality
               </option>
@@ -405,7 +444,11 @@ function Home() {
               <label htmlFor="List of Suppliers">List of Suppliers:</label>
             </div>
 
-            <input type="text" name="suppliers" />
+            <input
+              type="text"
+              name="suppliers"
+              placeholder="Enter Supplers name"
+            />
           </div>
           {/* {marketing avenue} */}
           <div className="form_inputdiv">
@@ -465,7 +508,7 @@ function Home() {
             </div>
           </div>
           {/* {scaleup potential} */}
-          <div className="form_inputdiv">
+          <div className="form_inputdiv" style={{ marginBottom: "30px" }}>
             <div className="form_labeldiv">
               <label htmlFor="Avenues of scaling up in future">
                 Avenues of scaling up in future:

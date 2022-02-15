@@ -48,6 +48,7 @@ option {
   width: 220px;
   overflow: hidden;
   margin-right: 10px;
+  overflow: hidden;
 }
 .form_checkbox_div {
   display: flex;
