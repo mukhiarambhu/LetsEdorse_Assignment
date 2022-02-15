@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import "./home.css";
 
@@ -32,16 +33,28 @@ function Home() {
   const name = "Rambhu";
   const business_idea = "medical courier service";
   const city = "pune";
-
+  //state for business stage
+  const [business_stage, setbusiness_stage] = useState(false);
+  //state for age_of_establishment
+  const [age_of_establishment, setage_of_establishment] = useState(false);
   function handleChange(e) {
     const { name, value, checked, type } = e.target;
     setInputData({
       ...inputData,
       [name]: value,
     });
+    if (name === "business_stage") {
+      setbusiness_stage(true);
+    } else if (name === "age_of_establishment") {
+      setage_of_establishment(true);
+    }
   }
+
+  // useEffect(() => {
+  //   setbusiness_stage(true);
+  // }, [business_stage]);
   return (
-    <div>
+    <div className="mainHome_div">
       <div className="form">
         <form action="">
           {/* {Stage of business} */}
@@ -670,6 +683,22 @@ function Home() {
             </div>
           </div>
         </form>
+      </div>
+      <div className="para">
+        <article>
+          <p>
+            <span>
+              {business_stage
+                ? `${name} is looking to ${inputData.business_stage} their business of ${business_idea}.`
+                : null}
+            </span>
+            <span>
+              {age_of_establishment
+                ? `This enterprise has been operational since ${inputData.age_of_establishment} years and has been serving its customers since then.`
+                : null}
+            </span>
+          </p>
+        </article>
       </div>
     </div>
   );
