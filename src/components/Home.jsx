@@ -32,8 +32,8 @@ function Home() {
               min="0"
               max="100"
             />
-            {/* {primary_product_service_offered} */}
           </div>
+          {/* {primary_product_service_offered} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               {" "}
@@ -45,7 +45,7 @@ function Home() {
             <input type="text" name="primary_product_service_offered" />
           </div>
 
-          <br />
+          {/* {offered_to} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Offered to">Offered to: </label>
@@ -59,7 +59,7 @@ function Home() {
             </select>
           </div>
 
-          <br />
+          {/* {offered_to} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Secondary Products/Services offfered">
@@ -70,7 +70,7 @@ function Home() {
             <input type="text" name="secondary_product_service_offered" />
           </div>
 
-          <br />
+          {/* {processed_products} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Processed products (Products you produce from the raw materials)">
@@ -82,7 +82,7 @@ function Home() {
             <input type="text" name="processed_products" />
           </div>
 
-          <br />
+          {/* {relevant_experience} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Years of relevant experience in this field">
@@ -93,7 +93,7 @@ function Home() {
             <input type="Number" name="relevant_experience" />
           </div>
 
-          <br />
+          {/* {skill_training} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               {" "}
@@ -111,8 +111,55 @@ function Home() {
               <option value="Retailers">Retailers</option>
             </select>
           </div>
+          {/* {multiform data} */}
+          <div className="form_inputdiv">
+            <div className="form_labeldiv">
+              <label htmlFor="Unique Selling Proposition">
+                Unique Selling Proposition:
+              </label>
+            </div>
 
-          <br />
+            <div className="form_checkbox_div">
+              <div>
+                <input type="checkbox" name="experience entrepreneur's " />
+                <p>experience entrepreneur's</p>
+              </div>
+              <div>
+                <input type="checkbox" name="innovative product/service" />
+                <p> innovative product/service</p>
+              </div>
+              <div>
+                <input type="checkbox" name="high profit margin" />
+                <p> high profit margin</p>
+              </div>
+              <div>
+                <input type="checkbox" name="high growth potential" />
+                <p> high growth potential</p>
+              </div>
+              <div>
+                <input type="checkbox" name="superior customer support" />
+                <p> superior customer support</p>
+              </div>
+              <div>
+                <input type="checkbox" name="quality and affordable" />
+                <p> quality and affordable</p>
+              </div>
+              <div>
+                <input type="checkbox" name="abundant supply" />
+                <p>abundant supply </p>
+              </div>
+              <div>
+                <input type="checkbox" name="large customer base" />
+                <p>large customer base </p>
+              </div>
+              <div>
+                <input type="checkbox" name="robust value-chain" />
+                <p>robust value-chain </p>
+              </div>
+            </div>
+          </div>
+
+          {/* {establishment_type} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Establishment type">Establishment type: </label>
@@ -136,7 +183,7 @@ function Home() {
             </select>
           </div>
 
-          <br />
+          {/* {business_area} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               {" "}
@@ -146,7 +193,7 @@ function Home() {
             <input type="text" name="business_area" />
           </div>
 
-          <br />
+          {/* {business_locality} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               {" "}
@@ -163,7 +210,7 @@ function Home() {
             </select>
           </div>
 
-          <br />
+          {/* {infra_ownership} */}
 
           <div className="form_inputdiv">
             <div className="form_labeldiv">
@@ -180,7 +227,7 @@ function Home() {
             </select>
           </div>
 
-          <br />
+          {/* {establishment_area} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Establishment area (in square feet) (Enter 0 if the establishment area is irrelevant)">
@@ -189,8 +236,92 @@ function Home() {
               </label>
             </div>
 
-            <input type="text" name="business_area" />
+            <input type="number" name="establishment_area" />
           </div>
+          {/* {reason for location} */}
+          <div className="form_inputdiv">
+            <div className="form_labeldiv">
+              <label htmlFor="Reason for selecting this location">
+                Reason for selecting this location:
+              </label>
+            </div>
+
+            <div className="form_checkbox_div">
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="Near to market"
+                />
+                <p>Near to market</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="Gootfootball"
+                />
+                <p> Gootfootball</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="Raw material available"
+                />
+                <p> Raw material available</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="target customer nearby"
+                />
+                <p> target customer nearby</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="less competition"
+                />
+                <p> less competition</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="access to permit"
+                />
+                <p> access to permit</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="Nearness to supplier"
+                />
+                <p>Nearness to supplier </p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="Affordability"
+                />
+                <p>Affordability </p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="reason_for_location"
+                  name="No rental overhead"
+                />
+                <p>No rental overhead </p>
+              </div>
+            </div>
+          </div>
+          {/* {market_research} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Market research">Market research: </label>
@@ -203,6 +334,7 @@ function Home() {
               </option>
             </select>
           </div>
+          {/* {primary_market} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Primary market">Primary market: </label>
@@ -215,6 +347,7 @@ function Home() {
               <option value="International">International</option>
             </select>
           </div>
+          {/* {customers} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Customers">Customers:</label>
@@ -222,6 +355,7 @@ function Home() {
 
             <input type="text" name="customers" />
           </div>
+          {/* {season of high sale} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Seasons of high sales">
@@ -244,6 +378,7 @@ function Home() {
               </option>
             </select>
           </div>
+          {/* {competition} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Competition">Competition: </label>
@@ -264,6 +399,7 @@ function Home() {
               </option>
             </select>
           </div>
+          {/* {suppliers} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="List of Suppliers">List of Suppliers:</label>
@@ -271,16 +407,112 @@ function Home() {
 
             <input type="text" name="suppliers" />
           </div>
-          {/* {multiform data} */}
+          {/* {marketing avenue} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
-              <label htmlFor="Unique Selling Proposition">
-                Unique Selling Proposition:
+              <label htmlFor="Marketing avenues">Marketing avenues:</label>
+            </div>
+
+            <div className="form_checkbox_div">
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="Distribution of marketing material "
+                />
+                <p>Distribution of marketing material</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="storefront/business branding"
+                />
+                <p> storefront/business branding</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="seasonal discount and offer"
+                />
+                <p> seasonal discount and offer</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="Cross-promotion"
+                />
+                <p> Cross-promotion</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="Digital Marketing"
+                />
+                <p> Digital Marketing</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="Word of mouth"
+                />
+                <p> Word of mouth</p>
+              </div>
+            </div>
+          </div>
+          {/* {scaleup potential} */}
+          <div className="form_inputdiv">
+            <div className="form_labeldiv">
+              <label htmlFor="Avenues of scaling up in future">
+                Avenues of scaling up in future:
               </label>
             </div>
 
             <div className="form_checkbox_div">
-              <input type="checkbox" />
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="increasing varity of product"
+                />
+                <p>increasing varity of product</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="opening more outlets"
+                />
+                <p> opening more outlets</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="growing scale of operation"
+                />
+                <p> growing scale of operation</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="building value chain int"
+                />
+                <p> building value chain int</p>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="scaleup_potential"
+                  name="allied revenue streams"
+                />
+                <p> allied revenue streams</p>
+              </div>
             </div>
           </div>
         </form>

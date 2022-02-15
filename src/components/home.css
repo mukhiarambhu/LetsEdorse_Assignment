@@ -4,7 +4,7 @@
 }
 
 .form {
-  width: 500px;
+  max-width: 600px;
   border: 1px solid black;
   margin-left: 20px;
   display: flex;
@@ -13,7 +13,7 @@
   height: 800px;
   margin-top: 50px;
   margin-bottom: 50px;
-  height: 600px;
+  height: 700px;
 }
 .form_inputdiv {
   padding-top: 10px;
@@ -31,17 +31,37 @@
 }
 
 select {
-  width: 150px;
+  width: 220px;
+  margin-right: 10px;
 }
 input[type="text"] {
-  width: 150px;
+  width: 230px;
+  margin-right: 10px;
 }
 
 input[type="number"] {
-  width: 150px;
+  width: 230px;
+  margin-right: 10px;
 }
 
 option {
-  width: 150px;
+  width: 220px;
   overflow: hidden;
+  margin-right: 10px;
+}
+.form_checkbox_div {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  margin-right: 10px;
+}
+.form_checkbox_div > div {
+  display: flex;
+  flex-direction: row;
+}
+.form_checkbox_div > div > p {
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 5px;
 }
