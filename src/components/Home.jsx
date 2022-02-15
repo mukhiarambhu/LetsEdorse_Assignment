@@ -1,7 +1,45 @@
 import React from "react";
+import { useState } from "react";
 import "./home.css";
 
 function Home() {
+  const [inputData, setInputData] = useState({
+    business_stage: "",
+    age_of_establishment: "",
+    primary_product_service_offered: "",
+    offered_to: "",
+    secondary_product_service_offered: "",
+    processed_products: "",
+    relevant_experience: "",
+    skill_training: "",
+    usp: [],
+    establishment_type: "",
+    business_area: "",
+    business_locality: "",
+    infra_ownership: "",
+    establishment_area: "",
+    reason_for_location: [],
+    market_research: "",
+    primary_market: "",
+    customers: "",
+    seasonality: "",
+    competition: "",
+    suppliers: "",
+    marketing_avenues: [],
+    scaleup_potential: [],
+  });
+  //global names
+  const name = "Rambhu";
+  const business_idea = "medical courier service";
+  const city = "pune";
+
+  function handleChange(e) {
+    const { name, value, checked, type } = e.target;
+    setInputData({
+      ...inputData,
+      [name]: value,
+    });
+  }
   return (
     <div>
       <div className="form">
@@ -12,7 +50,7 @@ function Home() {
               <label htmlFor="Stage of business">Stage of business: </label>
             </div>
 
-            <select name="business_stage">
+            <select name="business_stage" onChange={handleChange}>
               <option>select</option>
               <option value="Start-up">Start-up</option>
               <option value="Scale-up">Scale-up</option>
@@ -33,12 +71,12 @@ function Home() {
               min="0"
               max="100"
               placeholder="Enter age of Establishment"
+              onChange={handleChange}
             />
           </div>
           {/* {primary_product_service_offered} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
-              {" "}
               <label htmlFor="Primary Products/Services offfered">
                 Primary Products/Services offfered:
               </label>
@@ -48,6 +86,7 @@ function Home() {
               type="text"
               name="primary_product_service_offered"
               placeholder="Enter Primary Products/Services"
+              onChange={handleChange}
             />
           </div>
 
@@ -57,7 +96,7 @@ function Home() {
               <label htmlFor="Offered to">Offered to: </label>
             </div>
 
-            <select name="offered_to">
+            <select name="offered_to" onChange={handleChange}>
               <option>select</option>
               <option value="End customers">End customers</option>
               <option value="Wholesalers">Wholesalers</option>
@@ -78,6 +117,7 @@ function Home() {
               type="text"
               name="secondary_product_service_offered"
               placeholder="Enter Secondary Products/Service"
+              onChange={handleChange}
             />
           </div>
 
@@ -94,6 +134,7 @@ function Home() {
               type="text"
               name="processed_products"
               placeholder="Enter Processed Products"
+              onChange={handleChange}
             />
           </div>
 
@@ -109,6 +150,7 @@ function Home() {
               type="Number"
               name="relevant_experience"
               placeholder="Enter year of Experience "
+              onChange={handleChange}
             />
           </div>
 
@@ -119,7 +161,7 @@ function Home() {
               <label htmlFor="Skill training">Skill training: </label>
             </div>
 
-            <select name="skill_training">
+            <select name="skill_training" onChange={handleChange}>
               <option>select</option>
               <option value="No formal skill training">
                 No formal skill training
@@ -141,39 +183,84 @@ function Home() {
 
             <div className="form_checkbox_div">
               <div>
-                <input type="checkbox" name="experience entrepreneur's " />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="experience entrepreneur's "
+                />
                 <p>experience entrepreneur's</p>
               </div>
               <div>
-                <input type="checkbox" name="innovative product/service" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="innovative product/service"
+                />
                 <p> innovative product/service</p>
               </div>
               <div>
-                <input type="checkbox" name="high profit margin" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="high profit margin"
+                />
                 <p> high profit margin</p>
               </div>
               <div>
-                <input type="checkbox" name="high growth potential" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="high growth potential"
+                />
                 <p> high growth potential</p>
               </div>
               <div>
-                <input type="checkbox" name="superior customer support" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="superior customer support"
+                />
                 <p> superior customer support</p>
               </div>
               <div>
-                <input type="checkbox" name="quality and affordable" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="quality and affordable"
+                />
                 <p> quality and affordable</p>
               </div>
               <div>
-                <input type="checkbox" name="abundant supply" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="abundant supply"
+                />
                 <p>abundant supply </p>
               </div>
               <div>
-                <input type="checkbox" name="large customer base" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="large customer base"
+                />
                 <p>large customer base </p>
               </div>
               <div>
-                <input type="checkbox" name="robust value-chain" />
+                <input
+                  id="usp"
+                  type="checkbox"
+                  onChange={handleChange}
+                  name="robust value-chain"
+                />
                 <p>robust value-chain </p>
               </div>
             </div>
@@ -185,7 +272,7 @@ function Home() {
               <label htmlFor="Establishment type">Establishment type: </label>
             </div>
 
-            <select name="establishment_type">
+            <select name="establishment_type" onChange={handleChange}>
               <option>select</option>
               <option value="Factory">Factory</option>
               <option value="Mill">Mill</option>
@@ -214,7 +301,8 @@ function Home() {
             <input
               type="text"
               name="business_area"
-              placeholder="Enter Name of Area"
+              placeholder="Enter Name of business Area"
+              onChange={handleChange}
             />
           </div>
 
@@ -227,7 +315,7 @@ function Home() {
               </label>
             </div>
 
-            <select name="business_locality">
+            <select name="business_locality" onChange={handleChange}>
               <option>select</option>
               <option value="Urban">Urban</option>
               <option value="Rural">Rural</option>
@@ -245,7 +333,7 @@ function Home() {
               </label>
             </div>
 
-            <select name="infra_ownership">
+            <select name="infra_ownership" onChange={handleChange}>
               <option>select</option>
               <option value="Rented">Rented</option>
               <option value="Leased">Leased</option>
@@ -267,6 +355,7 @@ function Home() {
               type="number"
               name="establishment_area"
               placeholder="Enter Establishment area "
+              onChange={handleChange}
             />
           </div>
           {/* {reason for location} */}
@@ -282,6 +371,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="Near to market"
                 />
                 <p>Near to market</p>
@@ -290,6 +380,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="Gootfootball"
                 />
                 <p> Gootfootball</p>
@@ -298,6 +389,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="Raw material available"
                 />
                 <p> Raw material available</p>
@@ -306,6 +398,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="target customer nearby"
                 />
                 <p> target customer nearby</p>
@@ -314,6 +407,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="less competition"
                 />
                 <p> less competition</p>
@@ -322,6 +416,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="access to permit"
                 />
                 <p> access to permit</p>
@@ -330,6 +425,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="Nearness to supplier"
                 />
                 <p>Nearness to supplier </p>
@@ -338,6 +434,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="Affordability"
                 />
                 <p>Affordability </p>
@@ -346,6 +443,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
+                  onChange={handleChange}
                   name="No rental overhead"
                 />
                 <p>No rental overhead </p>
@@ -358,7 +456,7 @@ function Home() {
               <label htmlFor="Market research">Market research: </label>
             </div>
 
-            <select name="market_research">
+            <select name="market_research" onChange={handleChange}>
               <option>select</option>
               <option value="Not conducted">Not conducted</option>
               <option value="Market research has been conducted">
@@ -372,7 +470,7 @@ function Home() {
               <label htmlFor="Primary market">Primary market: </label>
             </div>
 
-            <select name="primary_market">
+            <select name="primary_market" onChange={handleChange}>
               <option>select</option>
               <option value="Local">Local</option>
               <option value="Regional">Regional</option>
@@ -390,6 +488,7 @@ function Home() {
               type="text"
               name="customers"
               placeholder="Enter Customer name"
+              onChange={handleChange}
             />
           </div>
           {/* {season of high sale} */}
@@ -400,7 +499,7 @@ function Home() {
               </label>
             </div>
 
-            <select name="seasonality">
+            <select name="seasonality" onChange={handleChange}>
               <option>select</option>
               <option value="Consisitent sales across all seasons">
                 Consisitent sales across all seasons
@@ -422,7 +521,7 @@ function Home() {
               <label htmlFor="Competition">Competition: </label>
             </div>
 
-            <select name="competition">
+            <select name="competition" onChange={handleChange}>
               <option>select</option>
               <option value="No similar goods/service provider in this locality">
                 No similar goods/service provider in this locality
@@ -448,6 +547,7 @@ function Home() {
               type="text"
               name="suppliers"
               placeholder="Enter Supplers name"
+              onChange={handleChange}
             />
           </div>
           {/* {marketing avenue} */}
@@ -460,7 +560,8 @@ function Home() {
               <div>
                 <input
                   type="checkbox"
-                  id="scaleup_potential"
+                  id="marketing_avenues"
+                  onChange={handleChange}
                   name="Distribution of marketing material "
                 />
                 <p>Distribution of marketing material</p>
@@ -468,7 +569,8 @@ function Home() {
               <div>
                 <input
                   type="checkbox"
-                  id="scaleup_potential"
+                  id="marketing_avenues"
+                  onChange={handleChange}
                   name="storefront/business branding"
                 />
                 <p> storefront/business branding</p>
@@ -476,7 +578,8 @@ function Home() {
               <div>
                 <input
                   type="checkbox"
-                  id="scaleup_potential"
+                  id="marketing_avenues"
+                  onChange={handleChange}
                   name="seasonal discount and offer"
                 />
                 <p> seasonal discount and offer</p>
@@ -484,7 +587,8 @@ function Home() {
               <div>
                 <input
                   type="checkbox"
-                  id="scaleup_potential"
+                  id="marketing_avenues"
+                  onChange={handleChange}
                   name="Cross-promotion"
                 />
                 <p> Cross-promotion</p>
@@ -492,7 +596,8 @@ function Home() {
               <div>
                 <input
                   type="checkbox"
-                  id="scaleup_potential"
+                  id="marketing_avenues"
+                  onChange={handleChange}
                   name="Digital Marketing"
                 />
                 <p> Digital Marketing</p>
@@ -500,7 +605,8 @@ function Home() {
               <div>
                 <input
                   type="checkbox"
-                  id="scaleup_potential"
+                  id="marketing_avenues"
+                  onChange={handleChange}
                   name="Word of mouth"
                 />
                 <p> Word of mouth</p>
@@ -520,6 +626,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
+                  onChange={handleChange}
                   name="increasing varity of product"
                 />
                 <p>increasing varity of product</p>
@@ -528,6 +635,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
+                  onChange={handleChange}
                   name="opening more outlets"
                 />
                 <p> opening more outlets</p>
@@ -536,6 +644,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
+                  onChange={handleChange}
                   name="growing scale of operation"
                 />
                 <p> growing scale of operation</p>
@@ -544,6 +653,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
+                  onChange={handleChange}
                   name="building value chain int"
                 />
                 <p> building value chain int</p>
@@ -552,6 +662,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
+                  onChange={handleChange}
                   name="allied revenue streams"
                 />
                 <p> allied revenue streams</p>
