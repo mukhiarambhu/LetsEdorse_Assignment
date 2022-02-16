@@ -1,3 +1,14 @@
+# About Project
+This project revolve around hadling a form and taking input from various input type like checkbox,select,textbox.Upon entering data user can simultaneously see whether he is filling form correctly.
+
+# Website
+
+Click this link to visit [Create React App](https://github.com/facebook/create-react-app).
+
+# Screenshot
+[![capture.jpg](https://i.postimg.cc/nLyYkkj0/capture.jpg)](https://postimg.cc/67hv6Chv)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
