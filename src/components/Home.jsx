@@ -98,6 +98,7 @@ function Home() {
         </div>
         <form action="">
           {/* {Stage of business} */}
+          <h3>Section:Introduction</h3>
           <div className="form_inputdiv">
             <div className="form_labeldiv">
               <label htmlFor="Stage of business">Stage of business: </label>
@@ -318,7 +319,7 @@ function Home() {
               </div>
             </div>
           </div>
-
+          <h3>Section:Location</h3>
           {/* {establishment_type} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
@@ -503,6 +504,7 @@ function Home() {
               </div>
             </div>
           </div>
+          <h3>Section:Market Research</h3>
           {/* {market_research} */}
           <div className="form_inputdiv">
             <div className="form_labeldiv">
@@ -666,6 +668,7 @@ function Home() {
               </div>
             </div>
           </div>
+          <h3>Section:Scaling Potential</h3>
           {/* {scaleup potential} */}
           <div className="form_inputdiv" style={{ marginBottom: "30px" }}>
             <div className="form_labeldiv">
@@ -780,7 +783,7 @@ function Home() {
               {ups.length === 0
                 ? null
                 : ` The enterprise is uniquely positioned because of its -
-              ${ups.join(",")}`}
+              ${ups.join(",")}.`}
             </span>
           </p>
           {/* {second paragraph} */}
@@ -795,7 +798,7 @@ function Home() {
                 ? null
                 : inputData.establishment_area.length !== 0 &&
                   inputData.establishment_area > 0
-                ? `This enterprise has been operational since ${inputData.establishment_area} years and has been serving its customers since then.`
+                ? `The size of the establishment is ${inputData.establishment_area} sq.ft.`
                 : null}
             </span>
             <span>
@@ -846,7 +849,7 @@ function Home() {
             </span>
           </p>
           {/* {fourthpara} */}
-          <p>
+          <p style={{ marginTop: "10px" }}>
             <span>
               {scaleup.length === 0
                 ? null
