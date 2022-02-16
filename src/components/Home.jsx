@@ -34,7 +34,7 @@ function Home() {
   const business_idea = "medical courier service";
   const city = "pune";
   //state for business stage
-  const [business_stage, setbusiness_stage] = useState(false);
+  // const [business_stage, setbusiness_stage] = useState(false);
   //state for age_of_establishment
   const [age_of_establishment, setage_of_establishment] = useState(false);
   function handleChange(e) {
@@ -43,16 +43,13 @@ function Home() {
       ...inputData,
       [name]: value,
     });
-    if (name === "business_stage") {
-      setbusiness_stage(true);
-    } else if (name === "age_of_establishment") {
-      setage_of_establishment(true);
-    }
+    // if (name === "business_stage") {
+    //   setbusiness_stage(true);
+    // } else if (name === "age_of_establishment") {
+    //   setage_of_establishment(true);
+    // }
   }
 
-  // useEffect(() => {
-  //   setbusiness_stage(true);
-  // }, [business_stage]);
   return (
     <div className="mainHome_div">
       <div className="form">
@@ -64,7 +61,7 @@ function Home() {
             </div>
 
             <select name="business_stage" onChange={handleChange}>
-              <option>select</option>
+              <option value="">select</option>
               <option value="Start-up">Start-up</option>
               <option value="Scale-up">Scale-up</option>
             </select>
@@ -110,7 +107,7 @@ function Home() {
             </div>
 
             <select name="offered_to" onChange={handleChange}>
-              <option>select</option>
+              <option value="">select</option>
               <option value="End customers">End customers</option>
               <option value="Wholesalers">Wholesalers</option>
               <option value="Distributors">Distributors</option>
@@ -175,7 +172,7 @@ function Home() {
             </div>
 
             <select name="skill_training" onChange={handleChange}>
-              <option>select</option>
+              <option value="">select</option>
               <option value="No formal skill training">
                 No formal skill training
               </option>
@@ -470,7 +467,7 @@ function Home() {
             </div>
 
             <select name="market_research" onChange={handleChange}>
-              <option>select</option>
+              <option value="">select</option>
               <option value="Not conducted">Not conducted</option>
               <option value="Market research has been conducted">
                 Market research has been conducted
@@ -513,7 +510,7 @@ function Home() {
             </div>
 
             <select name="seasonality" onChange={handleChange}>
-              <option>select</option>
+              <option value="">select</option>
               <option value="Consisitent sales across all seasons">
                 Consisitent sales across all seasons
               </option>
@@ -688,13 +685,99 @@ function Home() {
         <article>
           <p>
             <span>
-              {business_stage
+              {inputData.business_stage !== ""
                 ? `${name} is looking to ${inputData.business_stage} their business of ${business_idea}.`
                 : null}
             </span>
             <span>
-              {age_of_establishment
+              {inputData.age_of_establishment === 0
+                ? null
+                : inputData.age_of_establishment.length !== 0 &&
+                  inputData.age_of_establishment > 0
                 ? `This enterprise has been operational since ${inputData.age_of_establishment} years and has been serving its customers since then.`
+                : null}
+            </span>
+            <span>
+              {inputData.primary_product_service_offered.length !== 0
+                ? `This establishment offers products/services like-${inputData.primary_product_service_offered} to ${inputData.offered_to}.`
+                : null}
+            </span>
+
+            <span>
+              {inputData.secondary_product_service_offered.length !== 0
+                ? `In addition, the enterprise shall also be involved in- ${inputData.secondary_product_service_offered}.`
+                : null}
+            </span>
+            <span>
+              {inputData.processed_products.length === 0
+                ? null
+                : inputData.processed_products !== ""
+                ? `Other products of the enterprise shall include- ${inputData.processed_products}.`
+                : null}
+            </span>
+            <span>
+              {inputData.relevant_experience === 0
+                ? null
+                : inputData.relevant_experience.length !== 0 &&
+                  inputData.relevant_experience > 0
+                ? `This enterprise has been operational since ${inputData.relevant_experience} years and has been serving its customers since then.`
+                : null}
+            </span>
+
+            <span>
+              {inputData.skill_training === "" ||
+              inputData.skill_training === "No formal skill training"
+                ? null
+                : `The entrepreneur ${inputData.skill_training} in this field of work.`}
+            </span>
+          </p>
+          {/* {second paragraph} */}
+          <p>
+            <span>
+              {inputData.establishment_type === ""
+                ? null
+                : `The ${inputData.establishment_type} is located in ${inputData.business_locality} ${inputData.business_area} of ${city} in a ${inputData.infra_ownership} property.`}
+            </span>
+            <span>
+              {inputData.establishment_area === 0
+                ? null
+                : inputData.establishment_area.length !== 0 &&
+                  inputData.establishment_area > 0
+                ? `This enterprise has been operational since ${inputData.establishment_area} years and has been serving its customers since then.`
+                : null}
+            </span>
+          </p>
+          {/* {third paragraph} */}
+          <p>
+            <span>
+              {inputData.market_research === "" ||
+              inputData.market_research === "Not conducted"
+                ? null
+                : `The entrepreneur ${inputData.market_research} in this field of work.`}
+            </span>
+            <span>
+              {inputData.primary_market === ""
+                ? null
+                : `The entrepreneur ${inputData.primary_market} in this field of work.`}
+            </span>
+            <span>
+              {inputData.customers.length !== 0
+                ? `Our customers shall include- ${inputData.customers}`
+                : null}
+            </span>
+            <span>
+              {inputData.seasonality === ""
+                ? null
+                : `The nature of the business is such that we expect ${inputData.seasonality}.`}
+            </span>
+            <span>
+              {inputData.competition === ""
+                ? null
+                : `Regarding competition, there are ${inputData.competition}.`}
+            </span>
+            <span>
+              {inputData.suppliers.length !== 0
+                ? `The enterprise shall procure goods/raw materials from ${inputData.suppliers}.`
                 : null}
             </span>
           </p>
