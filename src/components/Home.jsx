@@ -33,26 +33,69 @@ function Home() {
   const name = "Rambhu";
   const business_idea = "medical courier service";
   const city = "pune";
-  //state for business stage
-  // const [business_stage, setbusiness_stage] = useState(false);
-  //state for age_of_establishment
-  const [age_of_establishment, setage_of_establishment] = useState(false);
+
   function handleChange(e) {
     const { name, value, checked, type } = e.target;
     setInputData({
       ...inputData,
       [name]: value,
     });
-    // if (name === "business_stage") {
-    //   setbusiness_stage(true);
-    // } else if (name === "age_of_establishment") {
-    //   setage_of_establishment(true);
-    // }
   }
 
+  //function to handle ups
+  const [ups, setUps] = useState([]);
+
+  function handleUps(e) {
+    const { checked, name } = e.target;
+
+    if (checked) {
+      setUps([...ups, name]);
+    } else {
+      setUps(ups.filter((e) => e !== name));
+    }
+  }
+  //function to handle location
+  const [location, setLocation] = useState([]);
+
+  function handleLocation(e) {
+    const { checked, name } = e.target;
+    if (checked) {
+      setLocation([...location, name]);
+    } else {
+      setLocation(location.filter((el) => el !== name));
+    }
+  }
+
+  //function to handle avenue
+  const [avenue, setAvenue] = useState([]);
+
+  function handleAvenue(e) {
+    const { name, checked } = e.target;
+    if (checked) {
+      setAvenue([...avenue, name]);
+    } else {
+      setAvenue(avenue.filter((el) => el !== name));
+    }
+  }
+
+  //function to handle scaleup
+  const [scaleup, setScaleups] = useState([]);
+
+  function handleScaleup(e) {
+    const { name, checked } = e.target;
+    console.log(name);
+    if (checked) {
+      setScaleups([...scaleup, name]);
+    } else {
+      setScaleups(scaleup.filter((el) => el !== name));
+    }
+  }
   return (
     <div className="mainHome_div">
       <div className="form">
+        <div className="form_heading">
+          <h2>Please,Fill Form Data</h2>
+        </div>
         <form action="">
           {/* {Stage of business} */}
           <div className="form_inputdiv">
@@ -196,7 +239,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="experience entrepreneur's "
                 />
                 <p>experience entrepreneur's</p>
@@ -205,7 +248,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="innovative product/service"
                 />
                 <p> innovative product/service</p>
@@ -214,7 +257,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="high profit margin"
                 />
                 <p> high profit margin</p>
@@ -223,7 +266,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="high growth potential"
                 />
                 <p> high growth potential</p>
@@ -232,7 +275,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="superior customer support"
                 />
                 <p> superior customer support</p>
@@ -241,7 +284,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="quality and affordable"
                 />
                 <p> quality and affordable</p>
@@ -250,7 +293,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="abundant supply"
                 />
                 <p>abundant supply </p>
@@ -259,7 +302,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="large customer base"
                 />
                 <p>large customer base </p>
@@ -268,7 +311,7 @@ function Home() {
                 <input
                   id="usp"
                   type="checkbox"
-                  onChange={handleChange}
+                  onChange={(e) => handleUps(e)}
                   name="robust value-chain"
                 />
                 <p>robust value-chain </p>
@@ -381,7 +424,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="Near to market"
                 />
                 <p>Near to market</p>
@@ -390,7 +433,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="Gootfootball"
                 />
                 <p> Gootfootball</p>
@@ -399,7 +442,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="Raw material available"
                 />
                 <p> Raw material available</p>
@@ -408,7 +451,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="target customer nearby"
                 />
                 <p> target customer nearby</p>
@@ -417,7 +460,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="less competition"
                 />
                 <p> less competition</p>
@@ -426,7 +469,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="access to permit"
                 />
                 <p> access to permit</p>
@@ -435,7 +478,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="Nearness to supplier"
                 />
                 <p>Nearness to supplier </p>
@@ -444,7 +487,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="Affordability"
                 />
                 <p>Affordability </p>
@@ -453,7 +496,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="reason_for_location"
-                  onChange={handleChange}
+                  onChange={(e) => handleLocation(e)}
                   name="No rental overhead"
                 />
                 <p>No rental overhead </p>
@@ -571,7 +614,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="marketing_avenues"
-                  onChange={handleChange}
+                  onChange={(e) => handleAvenue(e)}
                   name="Distribution of marketing material "
                 />
                 <p>Distribution of marketing material</p>
@@ -580,7 +623,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="marketing_avenues"
-                  onChange={handleChange}
+                  onChange={(e) => handleAvenue(e)}
                   name="storefront/business branding"
                 />
                 <p> storefront/business branding</p>
@@ -589,7 +632,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="marketing_avenues"
-                  onChange={handleChange}
+                  onChange={(e) => handleAvenue(e)}
                   name="seasonal discount and offer"
                 />
                 <p> seasonal discount and offer</p>
@@ -598,7 +641,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="marketing_avenues"
-                  onChange={handleChange}
+                  onChange={(e) => handleAvenue(e)}
                   name="Cross-promotion"
                 />
                 <p> Cross-promotion</p>
@@ -607,7 +650,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="marketing_avenues"
-                  onChange={handleChange}
+                  onChange={(e) => handleAvenue(e)}
                   name="Digital Marketing"
                 />
                 <p> Digital Marketing</p>
@@ -616,7 +659,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="marketing_avenues"
-                  onChange={handleChange}
+                  onChange={(e) => handleAvenue(e)}
                   name="Word of mouth"
                 />
                 <p> Word of mouth</p>
@@ -636,7 +679,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
-                  onChange={handleChange}
+                  onChange={(e) => handleScaleup(e)}
                   name="increasing varity of product"
                 />
                 <p>increasing varity of product</p>
@@ -645,7 +688,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
-                  onChange={handleChange}
+                  onChange={(e) => handleScaleup(e)}
                   name="opening more outlets"
                 />
                 <p> opening more outlets</p>
@@ -654,7 +697,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
-                  onChange={handleChange}
+                  onChange={(e) => handleScaleup(e)}
                   name="growing scale of operation"
                 />
                 <p> growing scale of operation</p>
@@ -663,7 +706,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
-                  onChange={handleChange}
+                  onChange={(e) => handleScaleup(e)}
                   name="building value chain int"
                 />
                 <p> building value chain int</p>
@@ -672,7 +715,7 @@ function Home() {
                 <input
                   type="checkbox"
                   id="scaleup_potential"
-                  onChange={handleChange}
+                  onChange={(e) => handleScaleup(e)}
                   name="allied revenue streams"
                 />
                 <p> allied revenue streams</p>
@@ -682,6 +725,9 @@ function Home() {
         </form>
       </div>
       <div className="para">
+        <div className="form_heading">
+          <h2>Check, have you filled it right ?</h2>
+        </div>
         <article>
           <p>
             <span>
@@ -730,9 +776,15 @@ function Home() {
                 ? null
                 : `The entrepreneur ${inputData.skill_training} in this field of work.`}
             </span>
+            <span>
+              {ups.length === 0
+                ? null
+                : ` The enterprise is uniquely positioned because of its -
+              ${ups.join(",")}`}
+            </span>
           </p>
           {/* {second paragraph} */}
-          <p>
+          <p style={{ marginTop: "10px" }}>
             <span>
               {inputData.establishment_type === ""
                 ? null
@@ -746,9 +798,14 @@ function Home() {
                 ? `This enterprise has been operational since ${inputData.establishment_area} years and has been serving its customers since then.`
                 : null}
             </span>
+            <span>
+              {location.length === 0
+                ? null
+                : `This locality is selected because of ${location.join(",")}`}
+            </span>
           </p>
           {/* {third paragraph} */}
-          <p>
+          <p tyle={{ marginTop: "10px" }}>
             <span>
               {inputData.market_research === "" ||
               inputData.market_research === "Not conducted"
@@ -779,6 +836,23 @@ function Home() {
               {inputData.suppliers.length !== 0
                 ? `The enterprise shall procure goods/raw materials from ${inputData.suppliers}.`
                 : null}
+            </span>
+            <span>
+              {avenue.length === 0
+                ? null
+                : `Our marketing avenues to reach the targeted customers shall include- ${avenue.join(
+                    ","
+                  )}`}
+            </span>
+          </p>
+          {/* {fourthpara} */}
+          <p>
+            <span>
+              {scaleup.length === 0
+                ? null
+                : `The various foreseeable avenues of scaling up and growing the business in the foreseeable future include- ${scaleup.join(
+                    ","
+                  )}.`}
             </span>
           </p>
         </article>

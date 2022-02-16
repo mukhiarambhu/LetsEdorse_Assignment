@@ -4,12 +4,12 @@
 }
 .mainHome_div {
   max-width: 1300px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100vp;
+  height: 60vp;
 }
 .form {
   max-width: 600px;
@@ -19,9 +19,16 @@
   flex-direction: column;
   overflow-y: scroll;
   height: 800px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   height: 700px;
+}
+.form_heading {
+  margin: auto;
+  height: 60px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-align: center;
 }
 .form_inputdiv {
   padding-top: 10px;
@@ -77,6 +84,9 @@ option {
 .para {
   width: 660px;
   border: 1px solid black;
-  margin-top: 50px;
+  margin-top: 10px;
   height: 700px;
+}
+.para > article {
+  margin-top: -20px;
 }
